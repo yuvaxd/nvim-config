@@ -1,12 +1,10 @@
 return {
-  'sainnhe/gruvbox-material',
-  lazy = false,
+  "navarasu/onedark.nvim",
   priority = 1000,
   config = function()
-    -- Optionally configure and load the colorscheme
-    -- directly inside the plugin declaration.
-    vim.g.gruvbox_material_enable_italic = true
-    vim.g.gruvbox_material_transparent_background = 2
-    vim.cmd.colorscheme('gruvbox-material')
+    require('onedark').setup {
+      transparent = true
+    }
+    require('onedark').load()
   end
 }
